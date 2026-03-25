@@ -37,10 +37,16 @@ class CanhCam_Header_Walker extends Walker_Nav_Menu {
         $title = apply_filters( 'the_title', $item->title, $item->ID );
         $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
+        // Item đầu tiên của level 0 -> Thay title bằng icon house
+        $is_first_home = ( $depth === 0 && $item->menu_order === 1 );
+        if ( $is_first_home ) {
+            $title = '<i class="fa-solid fa-house"></i>';
+        }
+
         $item_output = $args->before;
         
-        // Wrap <div class="title"> cho depth = 0
-        if( $depth === 0 ) {
+        // Wrap <div class="title"> cho depth = 0, trừ item home đầu tiên
+        if( $depth === 0 && ! $is_first_home ) {
             $item_output .= '<div class="title">';
         }
 
@@ -48,7 +54,7 @@ class CanhCam_Header_Walker extends Walker_Nav_Menu {
         $item_output .= $args->link_before . $title . $args->link_after;
         $item_output .= '</a>';
 
-        if( $depth === 0 ) {
+        if( $depth === 0 && ! $is_first_home ) {
             $item_output .= '</div>';
         }
 

@@ -1,0 +1,165 @@
+{
+    "key": "group_product_page",
+    "title": "Page: Product",
+    "fields": [
+        {
+            "key": "tab_prd_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_prd_banner_img",
+            "label": "Banner Image",
+            "name": "about_banner_img",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "instructions": "Dùng chung tên field với trang About để tái sử dụng module"
+        },
+        {
+            "key": "tab_prd_s1",
+            "label": "Section 1: Product List",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_prd_s1_title",
+            "label": "Title",
+            "name": "prd_s1_title",
+            "type": "text",
+            "default_value": "Why Fastener Sourcing Vietnam?"
+        },
+        {
+            "key": "field_prd_s1_desc",
+            "label": "Description",
+            "name": "prd_s1_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "We do more than find suppliers, we protect your investment by overseeing technical precision, factory capacity, and ethical standards. We provide a secure supply chain you can trust"
+        },
+        {
+            "key": "field_prd_s1_catalogue",
+            "label": "Download Catalogue",
+            "name": "prd_s1_catalogue",
+            "type": "file",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_prd_s2",
+            "label": "Section 2: Testing",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_prd_s2_title",
+            "label": "Title",
+            "name": "prd_s2_title",
+            "type": "text",
+            "default_value": "Testing"
+        },
+        {
+            "key": "field_prd_s2_subtitle",
+            "label": "Sub Title",
+            "name": "prd_s2_subtitle",
+            "type": "text",
+            "default_value": "All of the products are in accordance with DIN/ISO standards"
+        },
+        {
+            "key": "field_prd_s2_list",
+            "label": "Features List",
+            "name": "prd_s2_list",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_prd_s2_list_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_prd_s2_gallery",
+            "label": "Gallery",
+            "name": "prd_s2_gallery",
+            "type": "gallery",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "tab_prd_s3",
+            "label": "Section 3: Compliance",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_prd_s3_title",
+            "label": "Title",
+            "name": "prd_s3_title",
+            "type": "text",
+            "default_value": "compliance"
+        },
+        {
+            "key": "field_prd_s3_subtitle",
+            "label": "Sub Title",
+            "name": "prd_s3_subtitle",
+            "type": "text",
+            "default_value": "All of the products are in accordance with DIN/ISO standards"
+        },
+        {
+            "key": "field_prd_s3_list",
+            "label": "Compliance List",
+            "name": "prd_s3_list",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_prd_s3_list_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_prd_s3_gallery",
+            "label": "Compliance Slider",
+            "name": "prd_s3_gallery",
+            "type": "gallery",
+            "return_format": "array",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-product.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

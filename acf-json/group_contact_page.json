@@ -1,6 +1,6 @@
 {
     "key": "group_contact_page",
-    "title": "Trang Liên Hệ",
+    "title": "Contact Page",
     "fields": [
         {
             "key": "tab_contact_banner",
@@ -29,54 +29,32 @@
             "type": "text"
         },
         {
-            "key": "tab_contact_intro",
-            "label": "Form & Intro",
+            "key": "tab_contact_left",
+            "label": "Thông tin bên trái",
             "name": "",
             "type": "tab",
             "placement": "top"
+        },
+        {
+            "key": "field_cp_contact_badge",
+            "label": "Badge (Xin chào...)",
+            "name": "contact_badge",
+            "type": "text",
+            "default_value": "Xin chào chúng tôi là"
         },
         {
             "key": "field_cp_contact_title",
-            "label": "Tiêu đề liên hệ",
+            "label": "Tiêu đề",
             "name": "contact_title",
             "type": "text",
-            "default_value": "Liên hệ"
-        },
-        {
-            "key": "field_cp_contact_desc",
-            "label": "Mô tả ngắn",
-            "name": "contact_desc",
-            "type": "wysiwyg",
-            "media_upload": 0,
-            "toolbar": "basic"
-        },
-        {
-            "key": "field_cp_contact_form_shortcode",
-            "label": "Contact Form Shortcode",
-            "name": "contact_form_shortcode",
-            "type": "text",
-            "instructions": "Ví dụ: [contact-form-7 id=\"...\"]"
-        },
-        {
-            "key": "tab_contact_info",
-            "label": "Thông tin Liên hệ (Address)",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
-        },
-        {
-            "key": "field_cp_company_name",
-            "label": "Tên công ty",
-            "name": "company_name",
-            "type": "text",
-            "default_value": "CÔNG TY CỔ PHẦN TIẾP VẬN HƯNG PHƯỚC"
+            "default_value": "KC Hà Tĩnh"
         },
         {
             "key": "field_cp_contact_address_list",
             "label": "Danh sách Thông tin",
             "name": "contact_address_list",
             "type": "repeater",
-            "layout": "block",
+            "layout": "table",
             "button_label": "Thêm thông tin",
             "sub_fields": [
                 {
@@ -85,34 +63,28 @@
                     "name": "icon",
                     "type": "select",
                     "choices": {
-                        "fa-regular fa-location-dot": "Location (Địa chỉ)",
-                        "fa-regular fa-phone": "Phone (Điện thoại)",
-                        "fa-regular fa-envelope": "Envelope (Email)",
+                        "fa-light fa-location-dot": "Location (Địa chỉ)",
+                        "fa-light fa-phone": "Phone (Điện thoại)",
+                        "fa-light fa-envelope": "Envelope (Email)",
                         "fa-brands fa-facebook-f": "Facebook",
                         "fa-brands fa-youtube": "Youtube",
                         "fa-brands fa-instagram": "Instagram",
-                        "fa-regular fa-fax": "Fax",
-                        "fa-regular fa-globe": "Website"
+                        "fa-light fa-fax": "Fax",
+                        "fa-light fa-globe": "Website"
                     },
                     "return_format": "value",
-                    "ui": 1
+                    "ui": 1,
+                    "default_value": "fa-light fa-location-dot"
                 },
                 {
-                    "key": "field_cp_address_content",
+                    "key": "field_cp_address_text",
                     "label": "Nội dung",
-                    "name": "content",
+                    "name": "text",
                     "type": "wysiwyg",
-                    "media_upload": 0,
-                    "toolbar": "basic"
+                    "toolbar": "basic",
+                    "media_upload": 0
                 }
             ]
-        },
-        {
-            "key": "tab_contact_map",
-            "label": "Bản đồ (Map)",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
         },
         {
             "key": "field_cp_google_map_iframe",
@@ -120,6 +92,29 @@
             "name": "google_map_iframe",
             "type": "textarea",
             "instructions": "Dán mã <iframe src=...> lấy từ Google Maps"
+        },
+        {
+            "key": "tab_contact_right",
+            "label": "Form bên phải",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_cp_form_title",
+            "label": "Tiêu đề Form",
+            "name": "form_title",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "instructions": "Ví dụ: Mọi sự hợp tác tốt đẹp...<span> bạn sẽ được lắng nghe.</span>"
+        },
+        {
+            "key": "field_cp_contact_form_shortcode",
+            "label": "Contact Form Shortcode",
+            "name": "contact_form_shortcode",
+            "type": "text",
+            "instructions": "Ví dụ: [contact-form-7 id=\"...\"]"
         }
     ],
     "location": [

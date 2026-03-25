@@ -11,55 +11,29 @@
         },
         {
             "key": "field_home_banners",
-            "label": "Banners",
+            "label": "Banner Slides",
             "name": "home_banners",
             "type": "repeater",
             "layout": "table",
-            "button_label": "Thêm Banner",
+            "button_label": "Thêm Slide",
             "sub_fields": [
                 {
                     "key": "field_banner_type",
                     "label": "Type",
                     "name": "type",
                     "type": "select",
-                    "choices": {
-                        "image": "Image",
-                        "video": "Video"
-                    },
+                    "choices": { "image": "Image", "video": "Video" },
                     "default_value": "image",
+                    "ui": 1,
                     "return_format": "value"
                 },
                 {
-                    "key": "field_banner_video_desktop",
-                    "label": "Video Desktop",
-                    "name": "video_desktop",
+                    "key": "field_banner_video",
+                    "label": "Video (mp4)",
+                    "name": "video",
                     "type": "file",
                     "return_format": "array",
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_banner_type",
-                                "operator": "==",
-                                "value": "video"
-                            }
-                        ]
-                    ]
-                },
-                {
-                    "key": "field_banner_video_mobile",
-                    "label": "Video Mobile",
-                    "name": "video_mobile",
-                    "type": "file",
-                    "return_format": "array",
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_banner_type",
-                                "operator": "==",
-                                "value": "video"
-                            }
-                        ]
-                    ]
+                    "conditional_logic": [[{ "field": "field_banner_type", "operator": "==", "value": "video" }]]
                 },
                 {
                     "key": "field_banner_image_desktop",
@@ -67,15 +41,7 @@
                     "name": "image_desktop",
                     "type": "image",
                     "return_format": "array",
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_banner_type",
-                                "operator": "==",
-                                "value": "image"
-                            }
-                        ]
-                    ]
+                    "conditional_logic": [[{ "field": "field_banner_type", "operator": "==", "value": "image" }]]
                 },
                 {
                     "key": "field_banner_image_mobile",
@@ -83,150 +49,53 @@
                     "name": "image_mobile",
                     "type": "image",
                     "return_format": "array",
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_banner_type",
-                                "operator": "==",
-                                "value": "image"
-                            }
-                        ]
-                    ]
-                },
-                {
-                    "key": "field_banner_subtitle",
-                    "label": "Subtitle",
-                    "name": "subtitle",
-                    "type": "text"
-                },
-                {
-                    "key": "field_banner_title",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text"
-                },
-                {
-                    "key": "field_banner_description",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "text"
+                    "conditional_logic": [[{ "field": "field_banner_type", "operator": "==", "value": "image" }]]
                 }
             ]
         },
         {
-            "key": "tab_home_about",
-            "label": "About",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
+            "key": "field_home_banner_title",
+            "label": "Banner Title (h2)",
+            "name": "home_banner_title",
+            "type": "text",
+            "instructions": "Tiêu đề lớn giữa banner. VD: Fastener Sourcing Vietnam"
         },
         {
-            "key": "field_home_about_title",
-            "label": "About Title",
-            "name": "home_about_title",
-            "type": "text"
+            "key": "field_home_banner_subtitle",
+            "label": "Banner Subtitle",
+            "name": "home_banner_subtitle",
+            "type": "text",
+            "instructions": "Dòng mô tả nhỏ dưới title"
         },
         {
-            "key": "field_home_about_items",
-            "label": "About Items",
-            "name": "home_about_items",
+            "key": "field_home_banner_bottom_items",
+            "label": "Banner Bottom Items (swiper dưới)",
+            "name": "home_banner_bottom_items",
             "type": "repeater",
             "layout": "table",
+            "button_label": "Thêm Item",
             "sub_fields": [
                 {
-                    "key": "field_about_item_image",
-                    "label": "Image",
-                    "name": "image",
+                    "key": "field_bbi_icon",
+                    "label": "Icon (SVG/Image)",
+                    "name": "icon",
                     "type": "image",
                     "return_format": "array"
                 },
                 {
-                    "key": "field_about_item_title",
-                    "label": "Title",
+                    "key": "field_bbi_title",
+                    "label": "Title (h3)",
                     "name": "title",
                     "type": "text"
                 },
                 {
-                    "key": "field_about_item_desc",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "wysiwyg"
-                }
-            ]
-        },
-        {
-            "key": "tab_home_nw",
-            "label": "Network",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
-        },
-        {
-            "key": "field_home_nw_title",
-            "label": "Network Title",
-            "name": "home_nw_title",
-            "type": "text"
-        },
-        {
-            "key": "field_home_nw_desc",
-            "label": "Network Description",
-            "name": "home_nw_desc",
-            "type": "wysiwyg"
-        },
-        {
-            "key": "field_home_nw_img",
-            "label": "Network Image",
-            "name": "home_nw_image",
-            "type": "image",
-            "return_format": "array"
-        },
-        {
-            "key": "tab_home_srv",
-            "label": "Services",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
-        },
-        {
-            "key": "field_home_srv_title",
-            "label": "Services Title",
-            "name": "home_srv_title",
-            "type": "text"
-        },
-        {
-            "key": "field_home_srv_desc",
-            "label": "Services Description",
-            "name": "home_srv_desc",
-            "type": "wysiwyg"
-        },
-        {
-            "key": "field_home_srv_items",
-            "label": "Services Items",
-            "name": "home_srv_items",
-            "type": "repeater",
-            "layout": "table",
-            "sub_fields": [
-                {
-                    "key": "field_srv_item_img",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_srv_item_title",
-                    "label": "Title",
-                    "name": "title",
+                    "key": "field_bbi_desc",
+                    "label": "Sub Title",
+                    "name": "desc",
                     "type": "text"
                 },
                 {
-                    "key": "field_srv_item_desc",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "wysiwyg"
-                },
-                {
-                    "key": "field_srv_item_link",
+                    "key": "field_bbi_link",
                     "label": "Link",
                     "name": "link",
                     "type": "link",
@@ -235,101 +104,258 @@
             ]
         },
         {
-            "key": "tab_home_cu",
-            "label": "Choose Us",
+            "key": "tab_home_about",
+            "label": "About (section-home-1)",
             "name": "",
             "type": "tab",
             "placement": "top"
         },
         {
-            "key": "field_home_cu_title",
-            "label": "Choose Us Title",
-            "name": "home_cu_title",
-            "type": "text"
+            "key": "field_home_about_name",
+            "label": "Company Name (h2 highlight)",
+            "name": "home_about_name",
+            "type": "text",
+            "instructions": "VD: <span class=\"js-highlight\">Fastener Sourcing Vietnam</span><strong>(F.S.V)</strong>",
+            "default_value": "Fastener Sourcing Vietnam"
         },
         {
-            "key": "field_home_cu_items",
-            "label": "Choose Us Items",
-            "name": "home_cu_items",
+            "key": "field_home_about_slide_items",
+            "label": "Title Swiper Items",
+            "name": "home_about_slide_items",
             "type": "repeater",
-            "layout": "row",
+            "layout": "table",
+            "button_label": "Thêm Slide Title",
+            "instructions": "Mỗi item = 1 h3 title + data-background image",
             "sub_fields": [
                 {
-                    "key": "field_cu_item_title",
-                    "label": "Title",
+                    "key": "field_about_slide_title",
+                    "label": "Title (h3)",
                     "name": "title",
                     "type": "text"
                 },
                 {
-                    "key": "field_cu_item_desc",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "wysiwyg"
-                },
-                {
-                    "key": "field_cu_item_img",
-                    "label": "Image",
-                    "name": "image",
+                    "key": "field_about_slide_bg",
+                    "label": "Background Image",
+                    "name": "background",
                     "type": "image",
                     "return_format": "array"
                 }
             ]
         },
         {
-            "key": "tab_home_partner",
-            "label": "Partner",
+            "key": "field_home_about_desc",
+            "label": "Description",
+            "name": "home_about_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_home_about_link",
+            "label": "Button Link",
+            "name": "home_about_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_home_about_image",
+            "label": "Right Image",
+            "name": "home_about_image",
+            "type": "image",
+            "return_format": "array",
+            "instructions": "Ảnh bên phải section About (ratio 678:780)"
+        },
+        {
+            "key": "tab_home_whyus",
+            "label": "Why Us (section-home-2)",
             "name": "",
             "type": "tab",
             "placement": "top"
         },
         {
-            "key": "field_home_partner_image",
-            "label": "Main Image (Left)",
-            "name": "home_partner_image",
+            "key": "field_home_whyus_title",
+            "label": "Title (h2)",
+            "name": "home_whyus_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_whyus_bg",
+            "label": "Background Image",
+            "name": "home_whyus_bg",
+            "type": "image",
+            "return_format": "array",
+            "instructions": "data-background của section (full-width)"
+        },
+        {
+            "key": "field_home_whyus_grid",
+            "label": "Grid Items",
+            "name": "home_whyus_grid",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Thêm Item",
+            "instructions": "6 items: item đầu và cuối là ảnh (fancybox), item giữa có caption text. Item thứ 2 (item-focus) có cả ảnh + caption.",
+            "sub_fields": [
+                {
+                    "key": "field_whyus_item_type",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "select",
+                    "choices": {
+                        "image_only": "Ảnh (fancybox link)",
+                        "focus": "Focus (ảnh + caption)",
+                        "text_only": "Text caption only"
+                    },
+                    "default_value": "text_only",
+                    "ui": 1,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_whyus_item_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_whyus_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_whyus_item_desc",
+                    "label": "Description",
+                    "name": "desc",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "tab_home_srv",
+            "label": "Services (section-home-3)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_srv_title",
+            "label": "Title (h2)",
+            "name": "home_srv_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_srv_desc",
+            "label": "Sub Title",
+            "name": "home_srv_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_home_srv_link",
+            "label": "Explore More Link",
+            "name": "home_srv_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_home_slide_text",
+            "label": "Slide Text (section-slide-text)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_slide_text",
+            "label": "Slide Text Content",
+            "name": "home_slide_text",
+            "type": "text",
+            "instructions": "Text lặp chạy ngang. VD: FASTENER"
+        },
+        {
+            "key": "tab_home_products",
+            "label": "Products (section-home-4)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_products_title",
+            "label": "Title (h2)",
+            "name": "home_products_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_products_desc",
+            "label": "Sub Title",
+            "name": "home_products_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_home_products_bg",
+            "label": "Background Image",
+            "name": "home_products_bg",
             "type": "image",
             "return_format": "array"
         },
         {
-            "key": "field_home_partner_title_1",
-            "label": "List Name 1",
-            "name": "home_partner_title_1",
-            "type": "text",
-            "default_value": "Khách hàng"
-        },
-        {
-            "key": "field_home_partner_logos_1",
-            "label": "Logos 1",
-            "name": "home_partner_logos_1",
-            "type": "gallery",
-            "return_format": "array"
-        },
-        {
-            "key": "field_home_partner_title_2",
-            "label": "List Name 2",
-            "name": "home_partner_title_2",
-            "type": "text",
-            "default_value": "Khách hàng 2"
-        },
-        {
-            "key": "field_home_partner_logos_2",
-            "label": "Logos 2",
-            "name": "home_partner_logos_2",
-            "type": "gallery",
-            "return_format": "array"
-        },
-        {
             "key": "tab_home_news",
-            "label": "News & Events",
+            "label": "News & Events (section-home-5)",
             "name": "",
             "type": "tab",
             "placement": "top"
         },
         {
             "key": "field_home_news_title",
-            "label": "Title",
+            "label": "Title (h2)",
             "name": "home_news_title",
             "type": "text",
-            "default_value": "Tin tức - sự kiện"
+            "default_value": "News & Events"
+        },
+        {
+            "key": "field_home_news_desc",
+            "label": "Sub Title",
+            "name": "home_news_desc",
+            "type": "textarea",
+            "rows": 2
+        },
+        {
+            "key": "field_home_news_post_type",
+            "label": "Post Type",
+            "name": "home_news_post_type",
+            "type": "select",
+            "choices": {
+                "post": "Post (Blog)",
+                "service": "Service",
+                "product": "Product"
+            },
+            "default_value": "post",
+            "return_format": "value"
+        },
+        {
+            "key": "field_home_news_taxonomy",
+            "label": "Taxonomy",
+            "name": "home_news_taxonomy",
+            "type": "select",
+            "choices": {
+                "category": "Category (for Post)",
+                "service_cat": "Service Category",
+                "product_cat": "Product Category"
+            },
+            "default_value": "category",
+            "return_format": "value"
+        },
+        {
+            "key": "field_home_news_limit",
+            "label": "Số bài mỗi tab",
+            "name": "home_news_limit",
+            "type": "number",
+            "default_value": 6,
+            "min": 1,
+            "max": 12
         },
         {
             "key": "field_home_news_link",
@@ -339,78 +365,48 @@
             "return_format": "array"
         },
         {
-            "key": "tab_home_wf",
-            "label": "Workflow",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
-        },
-        {
-            "key": "field_home_wf_title",
-            "label": "Workflow Title",
-            "name": "home_wf_title",
-            "type": "text"
-        },
-        {
-            "key": "field_home_wf_desc",
-            "label": "Workflow Description",
-            "name": "home_wf_desc",
-            "type": "wysiwyg"
-        },
-        {
-            "key": "field_home_wf_img",
-            "label": "Workflow Image",
-            "name": "home_wf_image",
-            "type": "image",
-            "return_format": "array"
-        },
-        {
             "key": "tab_home_contact",
-            "label": "Contact / Quote",
+            "label": "Contact (section-hone-6)",
             "name": "",
             "type": "tab",
             "placement": "top"
         },
         {
-            "key": "field_home_contact_title_1",
-            "label": "Title 1 (Top line)",
-            "name": "home_contact_title_1",
-            "type": "text",
-            "default_value": "Báo giá dịch vụ"
-        },
-        {
-            "key": "field_home_contact_bg_1",
-            "label": "Title 1 Background Image",
-            "name": "home_contact_bg_1",
+            "key": "field_home_contact_bg",
+            "label": "Background Image",
+            "name": "home_contact_bg",
             "type": "image",
-            "return_format": "array"
+            "return_format": "array",
+            "instructions": "data-background của section contact"
         },
         {
-            "key": "field_home_contact_title_2",
-            "label": "Title 2 (Bottom line)",
-            "name": "home_contact_title_2",
+            "key": "field_home_contact_badge",
+            "label": "Badge Label (span.title-contact)",
+            "name": "home_contact_badge",
             "type": "text",
-            "default_value": "HP LOG"
+            "default_value": "Contact us"
         },
         {
-            "key": "field_home_contact_bg_2",
-            "label": "Title 2 Background Image",
-            "name": "home_contact_bg_2",
-            "type": "image",
-            "return_format": "array"
-        },
-        {
-            "key": "field_home_contact_sub_title",
-            "label": "Sub Title",
-            "name": "home_contact_sub_title",
+            "key": "field_home_contact_title",
+            "label": "Title (h2)",
+            "name": "home_contact_title",
             "type": "text",
-            "default_value": "Nhận báo giá nhanh & chính xác"
+            "default_value": "ENQUIRY"
         },
         {
-            "key": "field_home_contact_form",
+            "key": "field_home_contact_desc",
+            "label": "Description",
+            "name": "home_contact_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_home_contact_form_shortcode",
             "label": "Contact Form Shortcode",
             "name": "home_contact_form_shortcode",
-            "type": "text"
+            "type": "text",
+            "instructions": "VD: [contact-form-7 id=\"123\" title=\"Contact form\"]"
         }
     ],
     "location": [
@@ -427,9 +423,7 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": ["the_content"],
     "active": true,
     "description": ""
 }

@@ -1,6 +1,14 @@
 <?php
-/* Template Name: Dịch vụ (Service List) */
-get_header(); 
-?>
+/*
+Template Name: Services
+*/
+get_header();
 
-<?php get_footer(); ?>
+get_template_part( 'modules/about/banner' );
+get_template_part( 'modules/home/services' );
+get_template_part( 'modules/home/slide-text' );
+get_template_part( 'modules/service/solution' );
+get_template_part( 'modules/service/gallery' );
+get_template_part( 'modules/home/contact' );
+
+get_footer();

@@ -156,6 +156,7 @@ function canhcam_pagination($custom_query = null, $args = array()) {
 
     // Start output
     $output = '<div class="' . esc_attr($args['wrapper_class']) . '">';
+    $output= '<div class="navigation flex gap-2 body-2">';
     $output .= '<ul>';
     
     // Previous page link
@@ -197,6 +198,7 @@ function canhcam_pagination($custom_query = null, $args = array()) {
     
     $output .= '</ul>';
     $output .= '</div>';
+    $output .= '</div>';
     
     echo $output;
 }
@@ -234,6 +236,7 @@ function canhcam_pagination_simple($custom_query = null) {
     
     // Start output
     $output = '<div class="pagination flex-center mt-base">';
+    $output .= '<div class="navigation flex gap-2 body-2">';
     $output .= '<ul>';
     
     // Page number links
@@ -246,6 +249,7 @@ function canhcam_pagination_simple($custom_query = null) {
     }
     
     $output .= '</ul>';
+    $output .= '</div>';
     $output .= '</div>';
     
     echo $output;

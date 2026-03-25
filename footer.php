@@ -47,7 +47,7 @@
                 <div class="box-infor">
                     <?php if ( $company_name ) : ?>
                     <div class="box-name-web">
-                        <h2 class="title"><?php echo wp_kses_post( $company_name ); ?></h2>
+                        <h2 class="title js-highlight"><?php echo wp_kses_post( $company_name ); ?></h2>
                     </div>
                     <?php endif; ?>
 
@@ -113,7 +113,7 @@
                     <div class="box-logo">
                         <?php if ( $footer_logo ) : ?>
                         <div class="logo">
-                            <div class="img-ratio">
+                            <div class="img-ratio ratio:pt-[70_179]">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo esc_url( $footer_logo['url'] ); ?>"
                                          alt="<?php echo esc_attr( $footer_logo['alt'] ?: get_bloginfo( 'name' ) ); ?>">
@@ -124,7 +124,7 @@
 
                         <?php if ( $footer_logo_2 ) : ?>
                         <div class="logo-2">
-                            <div class="img-ratio">
+                            <div class="img-ratio ratio:pt-[52_107]">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <img src="<?php echo esc_url( $footer_logo_2['url'] ); ?>"
                                          alt="<?php echo esc_attr( $footer_logo_2['alt'] ?: get_bloginfo( 'name' ) ); ?>">

@@ -1,0 +1,141 @@
+{
+    "key": "group_service_page",
+    "title": "Page: Services",
+    "fields": [
+        {
+            "key": "tab_service_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_service_banner_img",
+            "label": "Banner Background",
+            "name": "about_banner_img",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_service_list",
+            "label": "Our Services (section-home-3)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_srv_title",
+            "label": "Title",
+            "name": "home_srv_title",
+            "type": "text",
+            "default_value": "Why Fastener Sourcing Vietnam?"
+        },
+        {
+            "key": "field_home_srv_desc",
+            "label": "Description",
+            "name": "home_srv_desc",
+            "type": "wysiwyg",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_home_srv_link",
+            "label": "View More Link",
+            "name": "home_srv_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_service_solution",
+            "label": "Solutions (section-service-1)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_srv_solution_image",
+            "label": "Image",
+            "name": "srv_solution_image",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_srv_solution_desc",
+            "label": "Description (Rich Text)",
+            "name": "srv_solution_desc",
+            "type": "wysiwyg",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "tab_service_gallery",
+            "label": "Gallery Tabs (section-service-2)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_srv_gallery_title",
+            "label": "Gallery Title",
+            "name": "srv_gallery_title",
+            "type": "text",
+            "default_value": "gallery"
+        },
+        {
+            "key": "field_srv_gallery_tabs",
+            "label": "Gallery Tabs",
+            "name": "srv_gallery_tabs",
+            "type": "repeater",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_srv_gt_label",
+                    "label": "Tab Label",
+                    "name": "label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_srv_gt_items",
+                    "label": "Gallery Items",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_srv_gti_img",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_srv_gti_title",
+                            "label": "Title Overlay",
+                            "name": "title",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-service.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": ""
+}

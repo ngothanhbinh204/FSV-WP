@@ -825,22 +825,21 @@ function create_taxonomy($key, $config = array())
 
 // Khởi tạo Post Type: Tuyển dụng (Recruitment)
 add_action('init', function() {
-    create_post_type('recruitment', array(
-        'name' => 'Tuyển dụng',
-        'singular_name' => 'Tuyển dụng',
-        'slug' => 'tuyen-dung',
-        'icon' => 'dashicons-welcome-learn-more',
+    create_post_type('service', array(
+        'name' => 'Services',
+        'singular_name' => 'Service',
+        'slug' => 'service',
+        'icon' => 'dashicons-clipboard',
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
         'hierarchical' => false,
         'has_archive' => false,
         'public' => true,
     ));
-
-    create_post_type('service', array(
-        'name' => 'Dịch vụ',
-        'singular_name' => 'Dịch vụ',
-        'slug' => 'dich-vu',
-        'icon' => 'dashicons-clipboard',
+	 create_post_type('product', array(
+        'name' => 'Products',
+        'singular_name' => 'Product',
+        'slug' => 'product',
+        'icon' => 'dashicons-cart',
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
         'hierarchical' => false,
         'has_archive' => false,

@@ -26,11 +26,10 @@
         ?>
 
         <div class="header-main">
-
             <div class="box-logo">
                 <?php if ( $header_logo ) : ?>
                 <div class="logo">
-                    <div class="img-ratio">
+                    <div class="img-ratio ratio:pt-[70_179]">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <img src="<?php echo esc_url( $header_logo['url'] ); ?>"
                                  alt="<?php echo esc_attr( $header_logo['alt'] ?: get_bloginfo( 'name' ) ); ?>"
@@ -43,7 +42,7 @@
                 <div class="logo"><?php the_custom_logo(); ?></div>
                 <?php else : ?>
                 <div class="logo">
-                    <div class="img-ratio">
+                    <div class="img-ratio ratio:pt-[70_179]">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <img src="<?php echo esc_url( THEME_URI . '/img/logo.svg' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
                         </a>
@@ -53,7 +52,7 @@
 
                 <?php if ( $header_logo_secondary ) : ?>
                 <div class="logo-2">
-                    <div class="img-ratio">
+                    <div class="img-ratio ratio:pt-[52_107]">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <img src="<?php echo esc_url( $header_logo_secondary['url'] ); ?>"
                                  alt="<?php echo esc_attr( $header_logo_secondary['alt'] ?: get_bloginfo( 'name' ) ); ?>"
