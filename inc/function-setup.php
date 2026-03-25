@@ -28,7 +28,6 @@ function canhcam_style()
 	 * Styles
 	 */
 
-	wp_enqueue_style('tailwind-style', THEME_URI . '/styles/tailwind.min.css', array(), GENERATE_VERSION);
 	wp_enqueue_style('frontend-style-global', THEME_URI . '/styles/core.min.css', array(), GENERATE_VERSION);
 	wp_enqueue_style('frontend-style-main', THEME_URI . '/styles/main.min.css', array(), GENERATE_VERSION);
 	
@@ -255,7 +254,6 @@ function canhcam_register_menus() {
         'primary-menu'   => esc_html__('Primary Menu', 'canhcamtheme'),
         'mobile-menu'    => esc_html__('Mobile Menu', 'canhcamtheme'),
         'footer-1'       => esc_html__('Footer Quick Link 1', 'canhcamtheme'),
-        'footer-2'       => esc_html__('Footer Quick Link 2', 'canhcamtheme'),
         'footer-policy'  => esc_html__('Footer Policy Menu', 'canhcamtheme'),
     ));
 }

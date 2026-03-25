@@ -81,16 +81,17 @@
       "button_label": "Thêm CTA Button",
       "sub_fields": [
         {
-          "key": "field_fixed_toc_type",
-          "label": "Loại nút",
-          "name": "type",
+          "key": "field_fixed_toc_style",
+          "label": "Style (CSS class)",
+          "name": "style",
           "type": "select",
+          "instructions": "Chọn class màu nền cho nút. VD: phone = đỏ, messenger = xanh",
           "choices": {
-            "single": "Nút liên kết đơn (Phone, Zalo...)",
-            "social_list": "Nút xổ danh sách Social ngang",
-            "quote": "Nút Báo giá (Request a Quote)"
+            "phone": "Phone (đỏ)",
+            "messenger": "Messenger (xanh)"
           },
-          "default_value": "single",
+          "default_value": "phone",
+          "allow_null": 0,
           "ui": 1,
           "return_format": "value"
         },
@@ -100,87 +101,23 @@
           "name": "icon_class",
           "type": "select",
           "choices": {
-            "fa-light fa-phone": "Phone",
-            "fa-light fa-messages": "Messages",
-            "fa-sharp fa-regular fa-pen": "Pen (Quotation)",
-            "fa-brands fa-facebook-f": "Facebook",
-            "fa-regular fa-map-location-dot": "Map Location",
-            "fa-regular fa-envelope": "Envelope",
-            "fa-solid fa-messages": "Messages Solid"
+            "fa-thin fa-phone": "Phone",
+            "fa-thin fa-messages": "Messages",
+            "fa-thin fa-envelope": "Envelope",
+            "fa-thin fa-map-location-dot": "Map Location",
+            "fa-brands fa-facebook-messenger": "Messenger",
+            "fa-brands fa-whatsapp": "WhatsApp",
+            "fa-brands fa-zalo": "Zalo"
           },
           "ui": 1,
           "return_format": "value"
-        },
-        {
-          "key": "field_fixed_toc_text",
-          "label": "Text",
-          "name": "text",
-          "type": "text",
-          "conditional_logic": [
-            [
-              {
-                "field": "field_fixed_toc_type",
-                "operator": "!=",
-                "value": "social_list"
-              }
-            ]
-          ]
         },
         {
           "key": "field_fixed_toc_link",
           "label": "Link",
           "name": "link",
           "type": "link",
-          "return_format": "array",
-          "conditional_logic": [
-            [
-              {
-                "field": "field_fixed_toc_type",
-                "operator": "!=",
-                "value": "social_list"
-              }
-            ]
-          ]
-        },
-        {
-          "key": "field_fixed_toc_socials_list",
-          "label": "Danh sách Social",
-          "name": "socials_list",
-          "type": "repeater",
-          "layout": "table",
-          "button_label": "Thêm Social",
-          "sub_fields": [
-            {
-              "key": "field_fixed_toc_socials_icon",
-              "label": "Icon Class",
-              "name": "icon_class",
-              "type": "select",
-              "choices": {
-                "fa-brands fa-facebook-messenger": "Messenger",
-                "fa-brands fa-whatsapp": "WhatsApp",
-                "fa-light fa-headset": "Headset",
-                "fa-brands fa-zalo": "Zalo"
-              },
-              "ui": 1,
-              "return_format": "value"
-            },
-            {
-              "key": "field_fixed_toc_socials_link",
-              "label": "Link",
-              "name": "link",
-              "type": "link",
-              "return_format": "array"
-            }
-          ],
-          "conditional_logic": [
-            [
-              {
-                "field": "field_fixed_toc_type",
-                "operator": "==",
-                "value": "social_list"
-              }
-            ]
-          ]
+          "return_format": "array"
         }
       ]
     },
@@ -204,7 +141,9 @@
       "key": "field_footer_company_name",
       "label": "Tên Công Ty",
       "name": "footer_company_name",
-      "type": "text"
+      "type": "wysiwyg",
+      "toolbar": "basic",
+      "media_upload": 0
     },
     {
       "key": "field_footer_contact_title",
