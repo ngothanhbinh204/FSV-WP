@@ -1,0 +1,350 @@
+{
+    "key": "group_about_page",
+    "title": "About Page",
+    "fields": [
+        {
+            "key": "tab_about_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_banner_img",
+            "label": "Banner Image",
+            "name": "about_banner_image",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_banner_sub",
+            "label": "Subtitle",
+            "name": "about_banner_subtitle",
+            "type": "text"
+        },
+        {
+            "key": "field_about_banner_title",
+            "label": "Title",
+            "name": "about_banner_title",
+            "type": "text"
+        },
+        {
+            "key": "tab_about_1",
+            "label": "About 1 (Về chúng tôi)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_1_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_1_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Về chúng tôi"
+        },
+        {
+            "key": "field_about_1_section_id",
+            "label": "Section ID",
+            "name": "about_1_section_id",
+            "type": "text",
+            "default_value": "scroll-block-1"
+        },
+        {
+            "key": "field_about_1_title",
+            "label": "Title",
+            "name": "about_1_title",
+            "type": "text"
+        },
+        {
+            "key": "field_about_1_desc",
+            "label": "Description",
+            "name": "about_1_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_about_1_img",
+            "label": "Image",
+            "name": "about_1_img",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_about_2",
+            "label": "About 2 (Tầm nhìn - Sứ mệnh)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_2_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_2_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Tầm nhìn - Sứ mệnh"
+        },
+        {
+            "key": "field_about_2_section_id",
+            "label": "Section ID",
+            "name": "about_2_section_id",
+            "type": "text",
+            "default_value": "scroll-block-2"
+        },
+        {
+            "key": "field_about_2_bg",
+            "label": "Background Image",
+            "name": "about_2_bg",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_2_items",
+            "label": "Items",
+            "name": "about_2_items",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_about_2_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_about_2_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_2_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "tab_about_3",
+            "label": "About 3 (Giá trị cốt lõi)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_3_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_3_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Giá trị cốt lõi"
+        },
+        {
+            "key": "field_about_3_section_id",
+            "label": "Section ID",
+            "name": "about_3_section_id",
+            "type": "text",
+            "default_value": "scroll-block-3"
+        },
+        {
+            "key": "field_about_3_title",
+            "label": "Title",
+            "name": "about_3_title",
+            "type": "text"
+        },
+        {
+            "key": "field_about_3_desc",
+            "label": "Description",
+            "name": "about_3_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_about_3_items",
+            "label": "Core Values Items",
+            "name": "about_3_items",
+            "type": "repeater",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_about_3_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_about_3_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_3_item_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "tab_about_4",
+            "label": "About 4 (Năng lực nền tảng)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_4_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_4_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Năng lực và nền tảng"
+        },
+        {
+            "key": "field_about_4_section_id",
+            "label": "Section ID",
+            "name": "about_4_section_id",
+            "type": "text",
+            "default_value": "scroll-block-4"
+        },
+        {
+            "key": "field_about_4_title",
+            "label": "Title",
+            "name": "about_4_title",
+            "type": "text"
+        },
+        {
+            "key": "field_about_4_items",
+            "label": "Items",
+            "name": "about_4_items",
+            "type": "repeater",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_about_4_item_title",
+                    "label": "Tab Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_4_item_desc",
+                    "label": "Tab Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                },
+                {
+                    "key": "field_about_4_item_image",
+                    "label": "Associated Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "tab_about_5",
+            "label": "About 5 (Định hướng)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_5_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_5_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Định hướng phát triển"
+        },
+        {
+            "key": "field_about_5_section_id",
+            "label": "Section ID",
+            "name": "about_5_section_id",
+            "type": "text",
+            "default_value": "scroll-block-5"
+        },
+        {
+            "key": "field_about_5_title",
+            "label": "Title",
+            "name": "about_5_title",
+            "type": "text"
+        },
+        {
+            "key": "field_about_5_bg",
+            "label": "Background Image",
+            "name": "about_5_bg",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_5_content",
+            "label": "Content",
+            "name": "about_5_content",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "tab_about_6",
+            "label": "About 6 (Thông điệp)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_about_6_nav_label",
+            "label": "Sticky Nav Label",
+            "name": "about_6_nav_label",
+            "type": "text",
+            "instructions": "Leave empty to hide from Sticky Nav",
+            "default_value": "Thông điệp"
+        },
+        {
+            "key": "field_about_6_section_id",
+            "label": "Section ID",
+            "name": "about_6_section_id",
+            "type": "text",
+            "default_value": "scroll-block-6"
+        },
+        {
+            "key": "field_about_6_bg_1",
+            "label": "Background Image 1",
+            "name": "about_6_bg_1",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_6_bg_2",
+            "label": "Background Image 2",
+            "name": "about_6_bg_2",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_6_desc",
+            "label": "Description text",
+            "name": "about_6_desc",
+            "type": "wysiwyg"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-about.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": ""
+}

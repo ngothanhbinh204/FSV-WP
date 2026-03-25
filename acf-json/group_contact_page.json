@@ -1,0 +1,144 @@
+{
+    "key": "group_contact_page",
+    "title": "Trang Liên Hệ",
+    "fields": [
+        {
+            "key": "tab_contact_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_cp_banner_img",
+            "label": "Banner Image",
+            "name": "banner_img",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_cp_banner_sub_title",
+            "label": "Tựa đề phụ (Subtitle)",
+            "name": "banner_sub_title",
+            "type": "text"
+        },
+        {
+            "key": "field_cp_banner_title",
+            "label": "Tựa đề chính (Title)",
+            "name": "banner_title",
+            "type": "text"
+        },
+        {
+            "key": "tab_contact_intro",
+            "label": "Form & Intro",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_cp_contact_title",
+            "label": "Tiêu đề liên hệ",
+            "name": "contact_title",
+            "type": "text",
+            "default_value": "Liên hệ"
+        },
+        {
+            "key": "field_cp_contact_desc",
+            "label": "Mô tả ngắn",
+            "name": "contact_desc",
+            "type": "wysiwyg",
+            "media_upload": 0,
+            "toolbar": "basic"
+        },
+        {
+            "key": "field_cp_contact_form_shortcode",
+            "label": "Contact Form Shortcode",
+            "name": "contact_form_shortcode",
+            "type": "text",
+            "instructions": "Ví dụ: [contact-form-7 id=\"...\"]"
+        },
+        {
+            "key": "tab_contact_info",
+            "label": "Thông tin Liên hệ (Address)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_cp_company_name",
+            "label": "Tên công ty",
+            "name": "company_name",
+            "type": "text",
+            "default_value": "CÔNG TY CỔ PHẦN TIẾP VẬN HƯNG PHƯỚC"
+        },
+        {
+            "key": "field_cp_contact_address_list",
+            "label": "Danh sách Thông tin",
+            "name": "contact_address_list",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Thêm thông tin",
+            "sub_fields": [
+                {
+                    "key": "field_cp_address_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "choices": {
+                        "fa-regular fa-location-dot": "Location (Địa chỉ)",
+                        "fa-regular fa-phone": "Phone (Điện thoại)",
+                        "fa-regular fa-envelope": "Envelope (Email)",
+                        "fa-brands fa-facebook-f": "Facebook",
+                        "fa-brands fa-youtube": "Youtube",
+                        "fa-brands fa-instagram": "Instagram",
+                        "fa-regular fa-fax": "Fax",
+                        "fa-regular fa-globe": "Website"
+                    },
+                    "return_format": "value",
+                    "ui": 1
+                },
+                {
+                    "key": "field_cp_address_content",
+                    "label": "Nội dung",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "media_upload": 0,
+                    "toolbar": "basic"
+                }
+            ]
+        },
+        {
+            "key": "tab_contact_map",
+            "label": "Bản đồ (Map)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_cp_google_map_iframe",
+            "label": "Google Map (Iframe)",
+            "name": "google_map_iframe",
+            "type": "textarea",
+            "instructions": "Dán mã <iframe src=...> lấy từ Google Maps"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": ""
+}

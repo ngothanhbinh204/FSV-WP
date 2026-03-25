@@ -1,0 +1,73 @@
+{
+    "key": "group_recruitment_detail",
+    "title": "Tuyển dụng Detail",
+    "fields": [
+        {
+            "key": "tab_job_info",
+            "label": "Thông tin tuyển dụng",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_job_deadline",
+            "label": "Hạn nộp hồ sơ",
+            "name": "job_deadline",
+            "type": "date_picker",
+            "display_format": "d/m/Y",
+            "return_format": "d.m.Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_job_location",
+            "label": "Địa điểm",
+            "name": "job_location",
+            "type": "text",
+            "default_value": "Trụ sở"
+        },
+        {
+            "key": "field_job_salary",
+            "label": "Mức lương",
+            "name": "job_salary",
+            "type": "text",
+            "default_value": "Thỏa thuận"
+        },
+        {
+            "key": "field_job_gender",
+            "label": "Giới tính",
+            "name": "job_gender",
+            "type": "select",
+            "choices": {
+                "Nam": "Nam",
+                "Nữ": "Nữ",
+                "Không yêu cầu": "Không yêu cầu"
+            },
+            "default_value": "Không yêu cầu",
+            "return_format": "value"
+        },
+        {
+            "key": "field_job_experience",
+            "label": "Kinh nghiệm",
+            "name": "job_experience",
+            "type": "text",
+            "default_value": "1-2 năm"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "recruitment"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

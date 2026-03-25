@@ -1,0 +1,435 @@
+{
+    "key": "group_home_page",
+    "title": "Home Page",
+    "fields": [
+        {
+            "key": "tab_home_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_banners",
+            "label": "Banners",
+            "name": "home_banners",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Thêm Banner",
+            "sub_fields": [
+                {
+                    "key": "field_banner_type",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "select",
+                    "choices": {
+                        "image": "Image",
+                        "video": "Video"
+                    },
+                    "default_value": "image",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_banner_video_desktop",
+                    "label": "Video Desktop",
+                    "name": "video_desktop",
+                    "type": "file",
+                    "return_format": "array",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_banner_type",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_banner_video_mobile",
+                    "label": "Video Mobile",
+                    "name": "video_mobile",
+                    "type": "file",
+                    "return_format": "array",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_banner_type",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_banner_image_desktop",
+                    "label": "Image Desktop",
+                    "name": "image_desktop",
+                    "type": "image",
+                    "return_format": "array",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_banner_type",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_banner_image_mobile",
+                    "label": "Image Mobile",
+                    "name": "image_mobile",
+                    "type": "image",
+                    "return_format": "array",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_banner_type",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "key": "field_banner_subtitle",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text"
+                },
+                {
+                    "key": "field_banner_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_banner_description",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_about",
+            "label": "About",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_about_title",
+            "label": "About Title",
+            "name": "home_about_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_about_items",
+            "label": "About Items",
+            "name": "home_about_items",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_about_item_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_about_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_about_item_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_nw",
+            "label": "Network",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_nw_title",
+            "label": "Network Title",
+            "name": "home_nw_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_nw_desc",
+            "label": "Network Description",
+            "name": "home_nw_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_home_nw_img",
+            "label": "Network Image",
+            "name": "home_nw_image",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_home_srv",
+            "label": "Services",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_srv_title",
+            "label": "Services Title",
+            "name": "home_srv_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_srv_desc",
+            "label": "Services Description",
+            "name": "home_srv_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_home_srv_items",
+            "label": "Services Items",
+            "name": "home_srv_items",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_srv_item_img",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_srv_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_srv_item_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                },
+                {
+                    "key": "field_srv_item_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_cu",
+            "label": "Choose Us",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_cu_title",
+            "label": "Choose Us Title",
+            "name": "home_cu_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_cu_items",
+            "label": "Choose Us Items",
+            "name": "home_cu_items",
+            "type": "repeater",
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_cu_item_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_cu_item_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                },
+                {
+                    "key": "field_cu_item_img",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_partner",
+            "label": "Partner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_partner_image",
+            "label": "Main Image (Left)",
+            "name": "home_partner_image",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_home_partner_title_1",
+            "label": "List Name 1",
+            "name": "home_partner_title_1",
+            "type": "text",
+            "default_value": "Khách hàng"
+        },
+        {
+            "key": "field_home_partner_logos_1",
+            "label": "Logos 1",
+            "name": "home_partner_logos_1",
+            "type": "gallery",
+            "return_format": "array"
+        },
+        {
+            "key": "field_home_partner_title_2",
+            "label": "List Name 2",
+            "name": "home_partner_title_2",
+            "type": "text",
+            "default_value": "Khách hàng 2"
+        },
+        {
+            "key": "field_home_partner_logos_2",
+            "label": "Logos 2",
+            "name": "home_partner_logos_2",
+            "type": "gallery",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_home_news",
+            "label": "News & Events",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_news_title",
+            "label": "Title",
+            "name": "home_news_title",
+            "type": "text",
+            "default_value": "Tin tức - sự kiện"
+        },
+        {
+            "key": "field_home_news_link",
+            "label": "View More Link",
+            "name": "home_news_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_home_wf",
+            "label": "Workflow",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_wf_title",
+            "label": "Workflow Title",
+            "name": "home_wf_title",
+            "type": "text"
+        },
+        {
+            "key": "field_home_wf_desc",
+            "label": "Workflow Description",
+            "name": "home_wf_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_home_wf_img",
+            "label": "Workflow Image",
+            "name": "home_wf_image",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_home_contact",
+            "label": "Contact / Quote",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_home_contact_title_1",
+            "label": "Title 1 (Top line)",
+            "name": "home_contact_title_1",
+            "type": "text",
+            "default_value": "Báo giá dịch vụ"
+        },
+        {
+            "key": "field_home_contact_bg_1",
+            "label": "Title 1 Background Image",
+            "name": "home_contact_bg_1",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_home_contact_title_2",
+            "label": "Title 2 (Bottom line)",
+            "name": "home_contact_title_2",
+            "type": "text",
+            "default_value": "HP LOG"
+        },
+        {
+            "key": "field_home_contact_bg_2",
+            "label": "Title 2 Background Image",
+            "name": "home_contact_bg_2",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_home_contact_sub_title",
+            "label": "Sub Title",
+            "name": "home_contact_sub_title",
+            "type": "text",
+            "default_value": "Nhận báo giá nhanh & chính xác"
+        },
+        {
+            "key": "field_home_contact_form",
+            "label": "Contact Form Shortcode",
+            "name": "home_contact_form_shortcode",
+            "type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": ""
+}

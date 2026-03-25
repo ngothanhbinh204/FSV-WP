@@ -1,0 +1,359 @@
+{
+  "key": "group_theme_config",
+  "title": "Theme Configuration",
+  "fields": [
+    {
+      "key": "tab_config",
+      "label": "Config",
+      "name": "",
+      "type": "tab",
+      "placement": "top"
+    },
+    {
+      "key": "field_config_head",
+      "label": "Config Head",
+      "name": "config_head",
+      "type": "textarea",
+      "instructions": "Nhập custom code cho <head> (CSS, meta tags, tracking...)",
+      "rows": 4
+    },
+    {
+      "key": "field_config_body",
+      "label": "Config Body",
+      "name": "config_body",
+      "type": "textarea",
+      "instructions": "Nhập custom code cuối <body> (JS, GTM, tracking...)",
+      "rows": 4
+    },
+    {
+      "key": "tab_header",
+      "label": "Header",
+      "name": "",
+      "type": "tab",
+      "placement": "top"
+    },
+    {
+      "key": "field_header_logo",
+      "label": "Logo Chính",
+      "name": "header_logo",
+      "type": "image",
+      "instructions": "Logo chính hiển thị trên header (khuyến khích SVG/WebP)",
+      "return_format": "array",
+      "preview_size": "thumbnail"
+    },
+    {
+      "key": "field_header_logo_secondary",
+      "label": "Logo Phụ",
+      "name": "header_logo_secondary",
+      "type": "image",
+      "instructions": "Logo phụ hiển thị cạnh logo chính (nếu có)",
+      "return_format": "array",
+      "preview_size": "thumbnail"
+    },
+    {
+      "key": "field_header_hotline",
+      "label": "Hotline",
+      "name": "header_hotline",
+      "type": "link",
+      "instructions": "VD: URL = tel:+842873051368, Title = +84 28 730 51 368",
+      "return_format": "array"
+    },
+    {
+      "key": "field_header_quote_form_shortcode",
+      "label": "Modal Báo Giá — Shortcode Form",
+      "name": "header_quote_form_shortcode",
+      "type": "text",
+      "instructions": "Nhập shortcode CF7. VD: [contact-form-7 id='123']"
+    },
+    {
+      "key": "tab_fixed_toc",
+      "label": "Fixed TOC & CTA",
+      "name": "",
+      "type": "tab",
+      "placement": "top"
+    },
+    {
+      "key": "field_fixed_toc_links",
+      "label": "Fixed CTA Buttons",
+      "name": "fixed_toc_links",
+      "type": "repeater",
+      "layout": "table",
+      "button_label": "Thêm CTA Button",
+      "sub_fields": [
+        {
+          "key": "field_fixed_toc_type",
+          "label": "Loại nút",
+          "name": "type",
+          "type": "select",
+          "choices": {
+            "single": "Nút liên kết đơn (Phone, Zalo...)",
+            "social_list": "Nút xổ danh sách Social ngang",
+            "quote": "Nút Báo giá (Request a Quote)"
+          },
+          "default_value": "single",
+          "ui": 1,
+          "return_format": "value"
+        },
+        {
+          "key": "field_fixed_toc_icon_class",
+          "label": "Icon Class",
+          "name": "icon_class",
+          "type": "select",
+          "choices": {
+            "fa-light fa-phone": "Phone",
+            "fa-light fa-messages": "Messages",
+            "fa-sharp fa-regular fa-pen": "Pen (Quotation)",
+            "fa-brands fa-facebook-f": "Facebook",
+            "fa-regular fa-map-location-dot": "Map Location",
+            "fa-regular fa-envelope": "Envelope",
+            "fa-solid fa-messages": "Messages Solid"
+          },
+          "ui": 1,
+          "return_format": "value"
+        },
+        {
+          "key": "field_fixed_toc_text",
+          "label": "Text",
+          "name": "text",
+          "type": "text",
+          "conditional_logic": [
+            [
+              {
+                "field": "field_fixed_toc_type",
+                "operator": "!=",
+                "value": "social_list"
+              }
+            ]
+          ]
+        },
+        {
+          "key": "field_fixed_toc_link",
+          "label": "Link",
+          "name": "link",
+          "type": "link",
+          "return_format": "array",
+          "conditional_logic": [
+            [
+              {
+                "field": "field_fixed_toc_type",
+                "operator": "!=",
+                "value": "social_list"
+              }
+            ]
+          ]
+        },
+        {
+          "key": "field_fixed_toc_socials_list",
+          "label": "Danh sách Social",
+          "name": "socials_list",
+          "type": "repeater",
+          "layout": "table",
+          "button_label": "Thêm Social",
+          "sub_fields": [
+            {
+              "key": "field_fixed_toc_socials_icon",
+              "label": "Icon Class",
+              "name": "icon_class",
+              "type": "select",
+              "choices": {
+                "fa-brands fa-facebook-messenger": "Messenger",
+                "fa-brands fa-whatsapp": "WhatsApp",
+                "fa-light fa-headset": "Headset",
+                "fa-brands fa-zalo": "Zalo"
+              },
+              "ui": 1,
+              "return_format": "value"
+            },
+            {
+              "key": "field_fixed_toc_socials_link",
+              "label": "Link",
+              "name": "link",
+              "type": "link",
+              "return_format": "array"
+            }
+          ],
+          "conditional_logic": [
+            [
+              {
+                "field": "field_fixed_toc_type",
+                "operator": "==",
+                "value": "social_list"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tab_footer_info",
+      "label": "Footer Info",
+      "name": "",
+      "type": "tab",
+      "placement": "top"
+    },
+    {
+      "key": "field_footer_logo",
+      "label": "Footer Logo",
+      "name": "footer_logo",
+      "type": "image",
+      "instructions": "Logo hiển thị ở footer bottom",
+      "return_format": "array",
+      "preview_size": "thumbnail"
+    },
+    {
+      "key": "field_footer_company_name",
+      "label": "Tên Công Ty",
+      "name": "footer_company_name",
+      "type": "text"
+    },
+    {
+      "key": "field_footer_contact_title",
+      "label": "Contact Block — Tiêu đề (h3)",
+      "name": "footer_contact_title",
+      "type": "text",
+      "instructions": "VD: OFFICE ADDRESS",
+      "default_value": "OFFICE ADDRESS"
+    },
+    {
+      "key": "field_footer_company_info",
+      "label": "Thông tin Liên hệ",
+      "name": "footer_company_info",
+      "type": "repeater",
+      "layout": "table",
+      "button_label": "Thêm thông tin",
+      "sub_fields": [
+        {
+          "key": "field_footer_company_info_icon",
+          "label": "Icon Class",
+          "name": "icon_class",
+          "type": "select",
+          "instructions": "Icon hiển thị đầu dòng thông tin",
+          "choices": {
+            "fa-sharp fa-regular fa-location-dot": "Location",
+            "fa-regular fa-phone": "Phone",
+            "fa-regular fa-envelope": "Email",
+            "fa-regular fa-globe": "Website"
+          },
+          "allow_null": 1,
+          "ui": 1,
+          "return_format": "value"
+        },
+        {
+          "key": "field_footer_company_info_content",
+          "label": "Content",
+          "name": "content",
+          "type": "wysiwyg",
+          "media_upload": 0,
+          "toolbar": "basic"
+        }
+      ]
+    },
+    {
+      "key": "field_footer_links_title",
+      "label": "Links Block — Tiêu đề (h3)",
+      "name": "footer_links_title",
+      "type": "text",
+      "default_value": "Liên kết nhanh",
+      "instructions": "Tiêu đề cho cột menu links (footer-1)"
+    },
+    {
+      "key": "field_footer_social_block_title",
+      "label": "Social Block — Tiêu đề (h3)",
+      "name": "footer_social_block_title",
+      "type": "text",
+      "default_value": "Follow Us",
+      "instructions": "Tiêu đề cột social links trong footer"
+    },
+    {
+      "key": "field_footer_ecosystem_text",
+      "label": "Ecosystem — Text",
+      "name": "footer_ecosystem_text",
+      "type": "text",
+      "instructions": "VD: Member of"
+    },
+    {
+      "key": "field_footer_ecosystem_logo",
+      "label": "Ecosystem — Logo",
+      "name": "footer_ecosystem_logo",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "thumbnail"
+    },
+    {
+      "key": "field_footer_ecosystem_website",
+      "label": "Ecosystem — Website",
+      "name": "footer_ecosystem_website",
+      "type": "link",
+      "return_format": "array"
+    },
+    {
+      "key": "field_footer_copyright",
+      "label": "Copyright",
+      "name": "footer_copyright",
+      "type": "text",
+      "instructions": "VD: © 2025 FSV. All Rights Reserved."
+    },
+    {
+      "key": "field_footer_socials",
+      "label": "Social Links",
+      "name": "footer_socials",
+      "type": "repeater",
+      "layout": "table",
+      "button_label": "Thêm Social",
+      "sub_fields": [
+        {
+          "key": "field_footer_socials_icon",
+          "label": "Icon Class",
+          "name": "icon_class",
+          "type": "select",
+          "choices": {
+            "fa-brands fa-facebook-f": "Facebook",
+            "fa-brands fa-instagram": "Instagram",
+            "fa-brands fa-youtube": "YouTube",
+            "fa-brands fa-linkedin-in": "LinkedIn",
+            "fa-brands fa-whatsapp": "WhatsApp"
+          },
+          "ui": 1,
+          "return_format": "value"
+        },
+        {
+          "key": "field_footer_socials_link",
+          "label": "URL",
+          "name": "link",
+          "type": "url"
+        }
+      ]
+    },
+    {
+      "key": "tab_recruitment",
+      "label": "Tuyển dụng",
+      "name": "",
+      "type": "tab",
+      "placement": "top"
+    },
+    {
+      "key": "field_option_form_recruitment",
+      "label": "Form Ứng tuyển (Shortcode)",
+      "name": "form_recruitment",
+      "type": "text",
+      "instructions": "Nhập shortcode Contact Form 7. VD: [contact-form-7 id='123' title='Ứng tuyển']"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "theme-settings"
+      }
+    ]
+  ],
+  "menu_order": 999,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "modified": 1742860800
+}

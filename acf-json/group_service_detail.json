@@ -1,0 +1,180 @@
+{
+    "key": "group_service_detail",
+    "title": "Service Detail",
+    "fields": [
+        {
+            "key": "tab_service_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_service_banner_img",
+            "label": "Banner Image",
+            "name": "service_banner_img",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_service_banner_sub",
+            "label": "Subtitle",
+            "name": "service_banner_sub",
+            "type": "text"
+        },
+        {
+            "key": "field_service_banner_title",
+            "label": "Title",
+            "name": "service_banner_title",
+            "type": "text"
+        },
+        {
+            "key": "tab_service_blocks",
+            "label": "Nội dung & Các Khối",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_service_main_desc",
+            "label": "Mô tả Khởi đầu (Storage Intro)",
+            "name": "service_main_desc",
+            "type": "wysiwyg",
+            "instructions": "Hiện ở section đầu tiên sau banner."
+        },
+        {
+            "key": "field_service_blocks",
+            "label": "Các Khối Nội dung (Blocks)",
+            "name": "service_blocks",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Thêm Khối",
+            "sub_fields": [
+                {
+                    "key": "field_sb_title",
+                    "label": "Tiêu đề Khối",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_sb_content",
+                    "label": "Nội dung Khối (Text / Table)",
+                    "name": "content",
+                    "type": "wysiwyg"
+                },
+                {
+                    "key": "field_sb_gallery",
+                    "label": "Thư viện Hình ảnh Slider",
+                    "name": "gallery",
+                    "type": "gallery",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "tab_service_demand",
+            "label": "Nhu cầu (Demand)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_service_demand_title",
+            "label": "Tiêu đề",
+            "name": "service_demand_title",
+            "type": "text",
+            "default_value": "Dịch vụ xây dựng theo nhu cầu"
+        },
+        {
+            "key": "field_service_demand_desc",
+            "label": "Mô tả",
+            "name": "service_demand_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_service_demand_items",
+            "label": "Danh sách tính năng",
+            "name": "service_demand_items",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_sd_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_sd_title",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "tab_service_faq",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_service_faq_groups",
+            "label": "Nhóm FAQ",
+            "name": "service_faq_groups",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Thêm nhóm FAQ",
+            "sub_fields": [
+                {
+                    "key": "field_sf_group_title",
+                    "label": "Tiêu đề nhóm (vd: Đại lý)",
+                    "name": "group_title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_sf_faqs",
+                    "label": "Danh sách Câu hỏi",
+                    "name": "faqs",
+                    "type": "repeater",
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_sf_question",
+                            "label": "Câu hỏi",
+                            "name": "question",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_sf_answer",
+                            "label": "Trả lời",
+                            "name": "answer",
+                            "type": "wysiwyg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": ""
+}

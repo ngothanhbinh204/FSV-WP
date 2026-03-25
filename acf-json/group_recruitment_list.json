@@ -1,0 +1,125 @@
+{
+    "key": "group_recruitment_list",
+    "title": "Danh sách Recruitment",
+    "fields": [
+        {
+            "key": "tab_rlist_banner",
+            "label": "Banner",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_rlist_banner_img",
+            "label": "Banner Image",
+            "name": "recruitment_banner_img",
+            "type": "image",
+            "return_format": "array"
+        },
+        {
+            "key": "field_rlist_banner_sub",
+            "label": "Subtitle",
+            "name": "recruitment_banner_sub",
+            "type": "text"
+        },
+        {
+            "key": "field_rlist_banner_title",
+            "label": "Title",
+            "name": "recruitment_banner_title",
+            "type": "text"
+        },
+        {
+            "key": "tab_rlist_benefits",
+            "label": "Phúc lợi (Benefits)",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_rlist_ben_title",
+            "label": "Tiêu đề",
+            "name": "recruitment_benefits_title",
+            "type": "text",
+            "default_value": "Benefits"
+        },
+        {
+            "key": "field_rlist_ben_items",
+            "label": "Danh sách Phúc lợi",
+            "name": "recruitment_benefits_items",
+            "type": "repeater",
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_rlist_ben_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_rlist_ben_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg"
+                }
+            ]
+        },
+        {
+            "key": "tab_rlist_about",
+            "label": "Giới thiệu Tuyển dụng",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_rlist_about_title",
+            "label": "Tiêu đề",
+            "name": "recruitment_about_title",
+            "type": "text"
+        },
+        {
+            "key": "field_rlist_about_desc",
+            "label": "Mô tả",
+            "name": "recruitment_about_desc",
+            "type": "wysiwyg"
+        },
+        {
+            "key": "field_rlist_about_images",
+            "label": "Hình ảnh Slide",
+            "name": "recruitment_about_images",
+            "type": "gallery",
+            "return_format": "array"
+        },
+        {
+            "key": "tab_rlist_config",
+            "label": "Cấu hình Danh sách",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_rlist_title",
+            "label": "Tiêu đề Danh sách",
+            "name": "recruitment_list_title",
+            "type": "text",
+            "default_value": "Vị trí tuyển dụng"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/template-recruitment.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}
